@@ -1,0 +1,11 @@
+int main() {
+    GameState state;
+    SimpleNNUE nnue(4, 10); // Example: 4 features, 10 neurons in the hidden layer
+
+    auto features = extractFeatures(state);
+    float evaluation = nnue.evaluate(features);
+
+    std::cout << "Evaluation: " << evaluation << std::endl;
+
+    return 0;
+}
